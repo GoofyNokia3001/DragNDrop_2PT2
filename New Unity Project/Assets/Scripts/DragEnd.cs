@@ -9,6 +9,7 @@ public class DragEnd : MonoBehaviour, IDropHandler{
 	private Vector2 placeSize, dragObjSize;
 	private float xSizeDiff, ySizeDiff;
 	public Objects ObjectScript;
+	public int punkti = 0;
 
 	
 
@@ -40,51 +41,63 @@ public class DragEnd : MonoBehaviour, IDropHandler{
 					{
 						case "garbage":
 							ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[0]);
+							punkti++;
 							break;
 
                         case "ambulance":
                             ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[1]);
+                            punkti++;
                             break;
 
                         case "bus":
                             ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[2]);
+                            punkti++;
                             break;
 
 					case "b2":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[4]);
-						break;
+                            punkti++;
+                            break;
 
 					case "e46":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[5]);
-						break;
+                            punkti++;
+                            break;
 
 					case "e61":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[6]);
-						break;
+                            punkti++;
+                            break;
 
 					case "cement":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[7]);
-						break;
+                            punkti++;
+                            break;
 
 					case "eskavat":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[8]);
-						break;
+                            punkti++;
+                            break;
 
 					case "police":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[9]);
-						break;
+                            punkti++;
+                            break;
 
 					case "trakt1":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[10]);
-						break;
+                            punkti++;
+                            break;
 
 					case "trakt2":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[11]);
-						break;
+                            punkti++;
+                            break;
 
 					case "firefighters":
 						ObjectScript.audioSource.PlayOneShot(ObjectScript.AudioToPlay[12]);
-						break;
+                            punkti++;
+                            break;
 
 					
 
@@ -149,6 +162,23 @@ public class DragEnd : MonoBehaviour, IDropHandler{
             }
 		}
     }
+    public GameObject MyPanel;
+    // Use this for initialization
+    void Start()
+    {
+        MyPanel.SetActive(false);
+    }
 
-   
+
+
+    void Update()
+    {
+		Debug.Log("Punkti:" + punkti);
+        if (punkti >= 12)
+        {
+            MyPanel.SetActive(true);
+        }
+    }
+
+
 }

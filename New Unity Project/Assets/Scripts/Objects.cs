@@ -83,8 +83,6 @@ public class Objects : MonoBehaviour {
 		FireFightCCOORD = FireFightCar.GetComponent<RectTransform>().localPosition;
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	
 }
