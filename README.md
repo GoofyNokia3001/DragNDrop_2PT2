@@ -1,7 +1,16 @@
 # DragNDrop_2PT2
 DragNDrop Functional. Game goal is to put vehicles in right position with right size and rotation.
+![Image](GameMenu.png)
 
-## To Do List
+
+## Car  Game
+### .exe files located here:
+![Image](Location.png)
+
+### And Unity files located here:
+![Image](Unityfiles.png)
+
+## Completed To Do List:
 - [x] Option to drag objects
 - [x] Option to drop object in free space
 - [x] Option to drop object in wrong place
