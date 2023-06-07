@@ -34,7 +34,7 @@ public class DragEnd : MonoBehaviour, IDropHandler{
 
 
         }
-        else { Debug.Log("Eblan"); }
+        else { Debug.Log("Error"); }
 	}
 
        
@@ -132,7 +132,7 @@ public class DragEnd : MonoBehaviour, IDropHandler{
 							panelEnd.GetComponent<Image>().color = NoTransparent;
                             firstTime = false;
 						}
-						else { Debug.Log("Eblan"); }
+						else { Debug.Log("Error"); }
                     }
                 }
             } else {
